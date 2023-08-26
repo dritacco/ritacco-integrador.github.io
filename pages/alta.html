@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritacco Store</title>
+
+    <script defer src="../../public/js/main.js"></script>
+    <script defer src="../../public/js/alta.js"></script>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/normalizer.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+    
+    <link rel="Icon" type="image/png" href="../icons/Ritacco-FavIcon.png">
+
+
+</head>
+<body>
+    <header class="Header">
+
+        <section class="banner__article">
+            <article class="article__top">
+<!--iconos banner superior-->
+                <picture class="top__icon">
+                    <img src="../icons/icon-location.webp" alt="Location Icon" width="24" height="24px">
+                    <p>ENVÍOS A TODO EL PAÍS</p>
+                    <img src="../icons/icon-card.webp" alt="Card Icon" width="24" height="24px">
+                    <p>CUOTAS SIN INTERÉS</p>
+                </picture>
+            </article>
+        </section>
+
+        <section class="main__article">
+<!--Logo de la marca-->
+            <article class="article__logo">
+                <picture class="article__logo-img">
+                    <img src="../images/Ritacco-Logo-header.png" alt="Logo Header">
+                </picture>
+            </article>
+
+<!--Barra de navegación-->
+            <article class="article__navbar">
+                <button id="open" class="open-menu">&#9776;</button>
+                <nav class="navbar__nav" id="nav">
+                    <button class="close-menu" id="close">X</i></button>
+                    <ul class="nav__list">
+                        <li><a href="../index.html">Home</a></li>
+                        <li class="active"><a href="./alta.html">Alta</a></li>
+                        <li><a href="./contacto.html">Contacto</a></li>
+                        <li><a href="./nosotros.html">Nosotros</a></li>
+                    </ul>
+                </nav>
+            </article>
+<!--Icono de carrito de compras-->
+            <article class="article__shop">
+                <picture class="shop__icon">
+                    <img src="../icons/icon-bag.png" alt="Shop Icon" width="24" height="24px">
+                </picture>
+            </article>
+        </section>
+    </header>
+
+    <main class="main__alta">
+        <section class="alta__section">
+            <article class="section__title">
+                <h1>Gestión de Productos</h1>
+                <p>Complete el formulario para agregar productos a la venta.</p>
+            </article>
+            <article class="section__form">
+                <form class="form" action="index.php" method="post" id="form">
+                    <div class="form__box">
+                        <label for="nombre">Nombre</label>
+                        <input id="name" type="text" name="nombre" id="nombre" placeholder="Nombre del producto">
+                    </div>
+                    <div class="form__box">
+                        <label for="precio">Precio</label>
+                        <input id="price" type="number" name="precio" id="precio" placeholder="Precio del producto">
+                    </div>
+                    <div class="form__box">
+                        <label for="stock">Stock</label>
+                        <input id="stock" type="number" name="stock" id="stock" placeholder="Stock del producto">
+                    </div>
+                    <div class="form__box">
+                        <label for="marca">Marca</label>
+                        <input id="brand" type="text" name="marca" id="marca" placeholder="Marca del producto">
+                    </div>
+                    <div class="form__box">
+                        <label for="categoria">Categoría</label>
+                        <input id="category" type="text" name="categoria" id="categoria" placeholder="Categoría del producto">
+                    </div>
+                    <div class="form__box">
+                        <label for="descripcionCorta">Descripción Corta</label>
+                        <input id="sDescription" type="text" name="descripcionCorta" id="descripcionCorta" placeholder="Descripción Corta del producto">
+                    </div>
+                    <div class="form__box">
+                        <label for="descripcionLarga">Descripción Larga</label>
+                        <input id="lDescription" type="text" name="descripcionLarga" id="descripcionLarga" placeholder="Descripción Larga del producto">
+                    </div>
+                    <div class="form__box">
+                        <label for="envio">Envío sin cargo</label>
+                        <select id="sendFree" name="envio" id="envio">
+                            <option value="si">SI</option>
+                            <option value="no">NO</option>
+                        </select>
+                    </div>
+                    <div class="form__box">
+                        <label for="edadDesde">Edad Desde</label>
+                        <input id="ageFrom" type="number" name="edadDesde" id="edadDesde" placeholder="Edad Desde del producto">
+                    </div>
+                    <div class="form__box">
+                        <label for="edadHasta">Edad Hasta</label>
+                        <input id="ageTo" type="number" name="edadHasta" id="edadHasta" placeholder="Edad Hasta del producto">
+                    </div>
+                    <div class="form__box">
+                        <label for="foto">Adjuntar Foto</label>
+                        <input id="boxPicture" type="file" name="foto" id="foto" placeholder="Foto del producto">
+                        <p id="error" class="error"></p>
+                        <input id="altaSubmit" class="box__buttom" type="submit" value="Ingresar">
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer class="Footer">
+<!--Suscripción a página de Ofertas-->
+        <div class="footer__form">
+            <p class="form__title">¡Ingresá tu correo y enterate de las MEJORES OFERTAS!</p>
+            <form class="form__input" action="index.php" method="post">
+                <input class="form__input-text" type="email" name="email" placeholder="nombre@ejemplo.com">
+                <input class="form__input-buttom" type="submit" value="SUSCRIBIRME">
+            </form>
+        </div>
+
+<!--Link a cotacto-->
+        <div class="footer__box">
+        <div class="footer__contact">
+        <a href="./contacto.html">CONTACTO</a>
+        <a href="./contacto.html">+</a>
+        </div>
+
+        <div class="footer__follow">
+            <p class="follow__p">SEGUINOS</p>
+
+<!--Redes Sociales de la Marca-->
+            <picture class="follow__logo">
+                <a class="logo__ig" href="https://www.instagram.com/magherok/?hl=es" target="_blank">
+                <img src="../icons/icon-instagram.svg" alt="Instagram Logo">
+                </a>
+                <a class="logo__fb" href="https://www.facebook.com/magherok/?locale=es_LA" target="_blank">
+                <img src="../icons/icon-facebook.svg" alt="Facebook Logo">
+                </a>
+            </picture>
+            </div>
+
+        </div>
+
+<!--Logo del footer-->
+        <div class="footer__brand">
+            <picture class="footer__brand-logo">
+                <img src="../images/Ritacco-Logo-footer.svg" height="24" width="138" alt="Brand Image">
+                <p class="brand__copy">&copy; 2023. Todos los derechos reservados - Términos y condiciones</p> 
+            </picture>   
+<!--Logos de links externos-->
+            <picture class="footer__brand-refer">
+                <a class="brand__cace" href="https://cace.org.ar/">
+                <img src="../images/logoCace.svg" alt="Cace Logo">
+                </a>
+                <a class="brand__afip"  href="https://www.afip.gob.ar">
+                <img src="../images/logoAfip.webp" alt="Afip Logo">
+                </a>
+                <a class="brand__cruce"  href="https://www.e-cruce.com">
+                <img src="../images/logoCruce.webp" alt="Cruce Logo">
+                </a>
+                <a class="brand__vtex"  href="https://vtex.com">
+                <img src="../images/logoVtex.webp" alt="Vtex Logo">
+                </a>
+            </picture>
+        </div>
+    </footer>
+    
+</body>
+</html>
